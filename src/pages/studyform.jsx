@@ -56,7 +56,7 @@ const StudyForm = () => {
 
   return (
     <>
-      <CustomBox>
+      <CustomBox  borderStyle="solid-black" borderWidth="5px">
         <Flex alignItems="center" gap={2}>
           <Link to="">
             <ArrowBackIcon w={6} h={6} />

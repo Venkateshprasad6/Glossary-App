@@ -31,17 +31,17 @@ import CustomBox from "../components/customBox";
 
 const customers = [
   {
-    name: "Ameer",
+    name: "venkatesh",
     mobile: "9998889988",
     city: "Tirupur",
   },
   {
-    name: "John",
+    name: "prasad",
     mobile: "9999988888",
     city: "Chennai",
   },
   {
-    name: "Siva",
+    name: "dhinesh",
     mobile: "8888833333",
     city: "Trichy",
   },
@@ -167,7 +167,7 @@ const DynamicForm = () => {
 
   return (
     <>
-      <CustomBox>
+      <CustomBox borderStyle="solid-black" borderWidth="5px">
         <Flex alignItems="center" gap={2}>
           <Link to="">
             <ArrowBackIcon w={6} h={6} />

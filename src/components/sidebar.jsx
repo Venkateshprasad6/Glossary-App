@@ -25,7 +25,7 @@ import {
 } from "@chakra-ui/react";
 
 import {
-  FiHome,
+
   FiTrendingUp,
   FiMenu,
   FiBell,
@@ -35,7 +35,7 @@ import {
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const LinkItems = [
-  { name: "Dashboard", icon: FiHome, to: "/dashboard" },
+  
   { name: "Studyform", icon: FiTrendingUp, to: "/studyform" },
   { name: "DynamicForm", icon: FiTrendingUp, to: "/dynamicform" },
   { name: "AddState", icon: FiTrendingUp, to: "/addstate" },

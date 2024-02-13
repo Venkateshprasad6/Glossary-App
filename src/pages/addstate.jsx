@@ -32,13 +32,14 @@ const AddState = () => {
 
   return (
     <>
-      <CustomBox>
+      <CustomBox borderStyle="solid-black" borderWidth="5px">
         <Flex alignItems="center" gap={2}>
-          <Link to="/chit">
+          <Link to="">
             <ArrowBackIcon w={6} h={6} />
           </Link>
-          <Heading as="h3" size="lg" color="gray.600">
-            State Form
+
+          <Heading as="h3" size="lg">
+            STATE FORM
           </Heading>
         </Flex>
       </CustomBox>
@@ -46,36 +47,31 @@ const AddState = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <CustomBox>
           <Stack spacing={4}>
-            <FormControl isInvalid={errors.value}>
-              <FormLabel color="gray.600"> Name </FormLabel>
+            <FormControl isInvalid={errors?.id}>
+              <FormLabel> ID </FormLabel>
               <Input
                 type="text"
-                placeholder="Value"
-                {...register("value", {
-                  required: "Enter Value",
-                })}
+                placeholder="ID"
+                {...register("id", { required: "ID Field is Empty" })}
               />
               <FormErrorMessage>
-                {errors.value && errors.value.message}
+                {errors?.id && errors.id.message}
+              </FormErrorMessage>
+            </FormControl>
+            <FormControl isInvalid={errors?.state}>
+              <FormLabel> State </FormLabel>
+              <Input
+                type="text"
+                placeholder="state"
+                {...register("state", { required: "state Field is Empty" })}
+              />
+              <FormErrorMessage>
+                {errors?.state && errors.state.message}
               </FormErrorMessage>
             </FormControl>
 
-            <FormControl isInvalid={errors.label}>
-              <FormLabel color="gray.600"> Name </FormLabel>
-              <Input
-                type="text"
-                placeholder="Label"
-                {...register("label", {
-                  required: "Enter Label",
-                })}
-              />
-              <FormErrorMessage>
-                {errors.label && errors.label.message}
-              </FormErrorMessage>
-            </FormControl>
-
-            <Button type="submit" colorScheme="blue">
-              Next
+            <Button colorScheme="blue" type="submit">
+              Submit
             </Button>
           </Stack>
         </CustomBox>
